@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Go for the Eyes!!!</title>
+        <link rel="icon" type="image/png" href="boo.png" />
+        <style>
+            html,body{
+                margin:0;
+                padding:0;
+            }
+            div{
+                height: 100vh;
+                width: 100vw;
+                padding: 40px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button {
+                border: none;
+                background-color: blue;
+                color: white;
+                border-radius: 50%;
+                max-width:100%;
+                width: 250px;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                box-shadow: 2px 2px 2px #888888;
+            }
+            button:hover{
+                background-color: darkblue;
+            }
+            svg {
+                width: 75%;
+                height: 75%;
+                fill: currentColor;
+                margin-left:30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <button aria-label="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+            </button>
+            <audio src="go_4_the_eyes_boo.mp3" />
+        </div>
+        <script>
+            (function(){
+                const button = document.querySelector('button');
+                const audio = document.querySelector('audio');
+                button.addEventListener('click', function(){
+                    audio.play();
+                });
+            })();
+        </script>
+    </body>
+</html>
